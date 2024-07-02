@@ -4,10 +4,6 @@ What??
 A functionality where user can give vote to the given set of elector
 
 
-Models?
-Routes?
-
-
 
 Voting App functionality
 1.user signin /signup
@@ -34,11 +30,11 @@ User Authentication
 
 
 Voting : 
-    /candidate: GET - Get the list of elector.
-    /vote/electorId : POST - Vote for a specific candidate.
+    /list: GET - Get the list of candidates.
+    /vote/:candidateId: POST - Vote for a specific candidate.
 
 Vote Counts:
-    /vote/counts:GET - Get the list of the elector sorted by their vote counts.
+    /vote/count:GET - Get the list of the candidates sorted by their vote counts.
 
 
 User Profile:
@@ -46,6 +42,7 @@ User Profile:
     /profile/password :PUT- Change the user's password.
 
 Admin Candidate Management:
-    /electors:POST - Create a new candidate.
-    /electors/electorId :PUT - Update the existing candidate.
-    /electors/electorId : DELETE- Delete the existing candidate from the list.
+    candidate/:POST - Create a new candidate.
+    /candidate/ :PUT - Update the existing candidate.
+    /candidate/:candidateId :PUT - Update the existing candidate.
+    /candidate//:candidateId : DELETE- Delete the existing candidate from the list.
